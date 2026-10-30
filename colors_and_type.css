@@ -1,0 +1,228 @@
+/* ============================================================
+   shadcn/ui Design System — Colors & Type tokens
+   Source: ui.shadcn.com default Neutral theme (Tailwind v4, OKLCH)
+
+   Usage:
+     <link rel="stylesheet" href="colors_and_type.css">
+     <div class="bg-background text-foreground">...</div>
+     <h1>Heading</h1>  -- semantic element styles are wired up below
+
+   Dark mode: add class="dark" on <html> or a subtree.
+   ============================================================ */
+
+/* Geist is named in the stacks below but not bundled; it falls back to system-ui. */
+
+/* Geist Mono is not provided locally — fall back to system monospace */
+
+:root {
+  /* ---------- Radius scale (derived from --radius) ---------- */
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* ---------- Surface tokens (Neutral base) ---------- */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  /* ---------- Intent tokens ---------- */
+  --primary: oklch(0.55 0.17 255);          /* blue — calm, not saturated */
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* ---------- Chrome ---------- */
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  /* ---------- Charts (earth-tone palette) ---------- */
+  --chart-1: oklch(0.58 0.09 40);    /* clay — muted terracotta */
+  --chart-2: oklch(0.62 0.06 135);   /* sage — desaturated olive-green */
+  --chart-3: oklch(0.48 0.05 85);    /* moss — deep warm brown-green */
+  --chart-4: oklch(0.78 0.07 80);    /* sand — pale warm beige */
+  --chart-5: oklch(0.42 0.04 230);   /* slate — muted dusk blue */
+
+  /* ---------- Sidebar (own token set) ---------- */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.55 0.17 255);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* ---------- Type tokens ---------- */
+  --font-sans: "Geist", "Geist Static", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-display: var(--font-sans);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+
+  /* ---------- Spacing ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ---------- Shadows (Tailwind-matched) ---------- */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.68 0.17 255);
+  --primary-foreground: oklch(0.145 0 0);
+
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* ============================================================
+   Semantic element styles
+   ============================================================ */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px — shadcn default */
+  line-height: var(--leading-normal);
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--foreground);
+  margin: 0;
+}
+
+h1 { font-size: 3rem;      letter-spacing: var(--tracking-tighter); }  /* 48 — display */
+h2 { font-size: 2.25rem;   letter-spacing: var(--tracking-tight); }   /* 36 */
+h3 { font-size: 1.5rem;    letter-spacing: var(--tracking-tight); }   /* 24 */
+h4 { font-size: 1.25rem;   font-weight: 600; letter-spacing: var(--tracking-tight); } /* 20 */
+h5 { font-size: 1rem;      font-weight: 600; letter-spacing: normal; }
+h6 { font-size: 0.875rem;  font-weight: 600; letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+
+p { margin: 0; line-height: var(--leading-relaxed); }
+
+small { font-size: 0.75rem; color: var(--muted-foreground); }
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+code {
+  background: var(--muted);
+  color: var(--foreground);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125em;
+}
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  background: var(--muted);
+  color: var(--muted-foreground);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--border); }
+a:hover { text-decoration-color: var(--foreground); }
+
+::selection { background: var(--primary); color: var(--primary-foreground); }
+
+/* Utility text roles */
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-display {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-tight);
+}
+.text-lead { font-size: 1.25rem; color: var(--muted-foreground); line-height: var(--leading-snug); }
